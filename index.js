@@ -15,7 +15,7 @@ wss.on('connection', function connection(clientWs, req) {
   clientWs.on('message', (msg) => espWs.send(msg));   // Frontend -> ESP32
 });
 
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 3000; 
 server.listen(PORT, () => {
-  console.log(`WSS proxy running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
